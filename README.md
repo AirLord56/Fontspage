@@ -1,2 +1,2 @@
 # Fontspage
-A website made for change plain text to some fonts.
+A website made to change plain text intosome fonts.
