@@ -14,33 +14,55 @@
   --font-oswald: "Oswald", sans-serif;
 }
 
+html, body {
+  height: auto !important;
+  min-height: auto !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 html {
   width: auto !important;
-  height: 100vh !important;
+  min-height: 100vh !important;
   background: transparent !important;
+  overflow-y: scroll !important;
 }
 
 body {
-  width: 70% !important;
+  width: 90vw !important;
   max-width: 1200px !important;
   min-width: 300px !important;
-  min-height: 100vh !important;
-  height: auto !important;
+  min-height: auto !important;
   margin: 0 auto !important;
   padding: 20px 0 !important;
   background: transparent !important;
   position: relative !important;
   z-index: 1 !important;
-  overflow-y: auto !important;
+  overflow-y: scroll !important;
   font-family: inherit !important;
 }
+
+header, main, footer {
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+  width: 100% !important;
+  background: transparent !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+main {
+min-height: auto !important; 
+padding-bottom: 2rem !important;
+}
+
 header nav {
   width: 100% !important;
   font-size: 1.2rem;
   font-variant: small-caps;
   text-decoration: none;
-  position: relative !important;  /* Nuevo: contexto z-index */
-  z-index: 10 !important;        /* Alto, como input */
+  position: relative !important;
+  z-index: 10 !important;
   pointer-events: auto !important;
 }
 
@@ -58,62 +80,37 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--secondary-color);  /* Usa tu var, gris */
+  color: var(--secondary-color);
   position: relative !important;
   z-index: 10 !important;
   pointer-events: auto !important;
 }
 
 nav ul li a:hover {
-  color: var(--primary-color);    /* Naranja de tus vars */
+  color: var(--primary-color);
   text-decoration: underline;
 }
 
-
 #particles-js {
   width: 100vw !important;
-  height: 100vh !important;
+  height: 100% !important;
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   z-index: -1 !important;
   background-color: #000 !important;
-   pointer-events: none !important;
+  pointer-events: none !important;
 }
 
-
-header, main, footer {
-  padding-left: 15%  !important;   /* Quita estos, body ya centra */
-  padding-right: 15% !important;
-  width: 100% !important;
-  background: transparent !important;
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* Fuerza canvas de particles a viewport full */
-#particles-js canvas {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  z-index: -1 !important;
-    pointer-events: auto !important;
-}
-
-
-
+#particles-js canvas,
 .particles-js-canvas-el {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   width: 100vw !important;
-  height: 100vh !important;
   z-index: -1 !important;
-  pointer-events: none !important;
+  pointer-events: auto !important;
 }
-
 
 header h1 {
   text-align: center;
@@ -153,24 +150,23 @@ header h1 {
   transition: color 0.4s ease;
 }
 
-/* Boton de texto principal */
 .conversor {
   padding: 2rem 0;
+  position: relative !important;
+  z-index: 5 !important;
+  pointer-events: auto !important;
 }
 
 .input-wrapper {
   width: 70%;
   max-width: 800px;
   margin: 0 auto;
-  /* Centrado perfecto */
 }
-#input,
-#input:focus {
-  position: relative !important;
-  z-index: 10 !important; 
-  pointer-events: auto !important;
-}
+
 #input {
+  position: relative !important;
+  z-index: 10 !important;
+  pointer-events: auto !important;
   border-radius: 10px;
   outline: 2px solid var(--primary-color-2);
   border: none;
@@ -193,12 +189,6 @@ header h1 {
   box-shadow: 0 0 0 4px rgba(254, 191, 0, 0.4);
 }
 
-.conversor,
-label[for="input"] {
-  position: relative !important;
-  z-index: 5 !important;
-  pointer-events: auto !important;
-}
 .convertido textarea {
   border-radius: 10px;
   outline: 2px solid var(--primary-color-2);
@@ -216,5 +206,18 @@ label[for="input"] {
   box-sizing: border-box;
   position: relative !important;
   z-index: 10 !important;
+  pointer-events: auto !important;
+}
+
+.conversor label,
+.convertido label,
+#contenido {
+  z-index: 10 !important;
+  color: white !important;
+}
+
+label[for="input"] {
+  position: relative !important;
+  z-index: 5 !important;
   pointer-events: auto !important;
 }
