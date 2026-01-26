@@ -10,82 +10,189 @@
 </head>
 
 <body>
-	<div id="particles-js">	</div>
-		<header>
+	<div id="particles-js"> </div>
+	<header>
 
-			<h1 class="title">
-				Cambia la Fuente de Tu Texto
-			</h1>
-			<div class="base_text">
-				Selecciona tu frase favorita, elige estilos y fuentes personalizadas.<br>
-				¡Transforma palabras en diseños únicos!
+		<h1 class="title">
+			Cambia la Fuente de Tu Texto
+		</h1>
+		<div class="base_text">
+			Selecciona tu frase favorita, elige estilos y fuentes personalizadas.<br>
+			¡Transforma palabras en diseños únicos!
+		</div>
+		<nav class="filter-nav">
+			<ul>
+				<li><button class="filter-btn" data-filter="italic">Italics</button></li>
+				<li><button class="filter-btn" data-filter="bold">Bolds</button></li>
+				<li><button class="filter-btn" data-filter="styled">Styled</button></li>
+				<li><button class="filter-btn" data-filter="others">Others</button></li>
+			</ul>
+		</nav>
+
+
+	</header>
+
+	<main>
+		<section>
+			<!-- Text to convert. -->
+			<div class="conversor">
+				<label for="input"></label>
+				<textarea id="input" placeholder="Introduce tu texto aquí..."></textarea>
 			</div>
-			<nav>
-				<ul>
-					<li><a href="#">Italics</a></li>
-					<li><a href="#boldFonts">Bolds</a></li>
-					<li><a href="#">Others</a></li>
-					<li><a href="#">Styles</a></li>
+			<!-- Converted Fonts. -->
+			<!-- BOLD -->
+			<div class="convertido" data-type="bold">
+				<label>Mathematical bold</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
 
-				</ul>
-			</nav>
-		</header>
+			<div class="convertido" data-type="italic">
+				<label for="MathIT">Mathematical italic</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
 
-		<main>
-			<section>
-				<div class="conversor">
-					<label for="input"></label>
-					<textarea id="input" placeholder="Introduce tu texto aquí..."></textarea>
-				</div>
-				<div id="boldFonts">
-					<div class="convertido">
-						<label>Mathematical bold</label>
-						<textarea readonly></textarea>
-					</div>
+			<div class="convertido" data-type="bold" data-type="italic">
+				<label for="boldMathIT">Mathematical bold italic</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
 
-					<div class="convertido">
-						<label for="MathIT">Mathematical italic</label>
-						<textarea readOnly=""></textarea>
-					</div>
-					<div class="convertido">
-						<label for="boldMathIT">Mathematical bold italic</label>
-						<textarea readOnly=""></textarea>
-					</div>
-					<div class="convertido">
-						<label for="MathScript">Mathematical script</label>
-						<textarea readOnly=""></textarea>
-					</div>
-					<div class="convertido">
-						<label for="boldMathScript">Mathematical bold script</label>
-						<textarea readOnly=""></textarea>
-					</div>
-					<div class="convertido">
-						<label for="MathFraktur">Mathematical fraktur</label>
-						<textarea readOnly=""></textarea>
-					</div>
-					<div class="convertido">
-						<label for="boldMathFraktur">Mathematical bold fraktur</label>
-						<textarea readOnly=""></textarea>
-					</div>
-				</div>
-			</section>
+			<!-- STYLED -->
+			<div class="convertido" data-type="styled">
+				<label for="MathScript">Mathematical script</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
 
-			<section id="contenido">
-				<h2>¿Cómo funciona?</h2>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni alias officia quibusdam perferendis?
-					Ullam dolores minima nostrum velit asperiores sequi sed nulla nobis iste? Nulla nihil id libero quos
-					tenetur.</p>
-			</section>
-		</main>
+			<div class="convertido" data-type="bold">
+				<label for="boldMathScript">Mathematical bold script</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
 
-		<footer>
-			<p>&copy; 2026 FontsPage</p>
-		</footer>
+			<div class="convertido" data-type="styled">
+				<label for="MathFraktur">Mathematical fraktur</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="bold">
+				<label for="boldMathFraktur">Mathematical bold fraktur</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label for="small">Small</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label for="circled">Circled</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label for="NegativeCircled">Negative Circled</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label for="squared">Squared</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label for="NegativeSquared">Negative Squared</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<!-- OTHERS -->
+			<div class="convertido" data-type="others">
+				<label for="superscript">Superscript</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label for="subscript">Subscript</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label for="scribble">Scribble</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label for="BigScribble">Big Scribble</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label for="inverse">Inverse</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label for="outlined">Outlined</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label for="RegionalIndicator">Regional Indicator</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label for="FullWidth">Full Width</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label for="brackets">Brackets</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label for="DoubleStruck">Double Struck</label>
+				<textarea readOnly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+		</section>
+
+		<section id="contenido">
+			<h2>¿Cómo funciona?</h2>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni alias officia quibusdam perferendis?
+				Ullam dolores minima nostrum velit asperiores sequi sed nulla nobis iste? Nulla nihil id libero quos
+				tenetur.</p>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 FontsPage</p>
+	</footer>
 
 	<script src="js/dupe.js"></script>
 	<script src="js/fonts.js"></script>
 	<script src="js/particles.js-master/particles.js"></script>
 	<script src="js/particles.js-master/app.js"></script>
+	<script src="js/filters.js"></script>
 
 </body>
 

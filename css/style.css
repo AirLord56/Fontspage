@@ -14,7 +14,8 @@
   --font-oswald: "Oswald", sans-serif;
 }
 
-html, body {
+html,
+body {
   height: auto !important;
   min-height: auto !important;
   overflow-x: hidden;
@@ -42,7 +43,9 @@ body {
   font-family: inherit !important;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   padding-left: 5% !important;
   padding-right: 5% !important;
   width: 100% !important;
@@ -52,8 +55,8 @@ header, main, footer {
 }
 
 main {
-min-height: auto !important; 
-padding-bottom: 2rem !important;
+  min-height: auto !important;
+  padding-bottom: 2rem !important;
 }
 
 header nav {
@@ -99,7 +102,7 @@ nav ul li a:hover {
   left: 0 !important;
   z-index: -1 !important;
   background-color: #000 !important;
-  pointer-events: none !important;
+  pointer-events: auto !important;
 }
 
 #particles-js canvas,
@@ -155,6 +158,7 @@ header h1 {
   position: relative !important;
   z-index: 5 !important;
   pointer-events: auto !important;
+
 }
 
 .input-wrapper {
@@ -177,16 +181,21 @@ header h1 {
   width: 100%;
   min-height: 100px;
   color: #fff;
-  resize: vertical;
+  resize: none;
   font-size: 16px;
   text-align: center;
   box-sizing: border-box;
+  overflow: hidden !important;
 }
 
 #input:focus {
   outline-offset: 2px;
   background-color: #3a3737;
   box-shadow: 0 0 0 4px rgba(254, 191, 0, 0.4);
+}
+
+.convertido {
+  position: relative !important;
 }
 
 .convertido textarea {
@@ -200,13 +209,15 @@ header h1 {
   width: 100%;
   min-height: 75px;
   color: #fff;
-  resize: vertical;
+  resize: none;
   font-size: 16px;
   text-align: center;
   box-sizing: border-box;
   position: relative !important;
-  z-index: 10 !important;
+  z-index: 1 !important;
   pointer-events: auto !important;
+  padding-right: 50px !important;
+  overflow: hidden !important;
 }
 
 .conversor label,
@@ -220,4 +231,110 @@ label[for="input"] {
   position: relative !important;
   z-index: 5 !important;
   pointer-events: auto !important;
+}
+
+.copy-btn {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--primary-color) !important;
+  background: #1f1f1f !important;
+  color: white !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  transition: all 0.2s ease !important;
+}
+
+.copy-btn {
+  position: absolute !important;
+  top: 25% !important;
+  right: 1% !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--primary-color) !important;
+  background: #1f1f1f !important;
+  color: white !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+  z-index: 9999 !important;
+  transition: all 0.2s ease !important;
+}
+
+.copy-btn::before {
+  content: "📋" !important;
+}
+
+
+.copy-btn:hover {
+  background: var(--primary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+.copy-btn:active {
+  transform: scale(0.92) !important;
+}
+
+.copy-tooltip {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 99999;
+  white-space: nowrap;
+}
+
+.copy-tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.filter-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  font-variant: small-caps;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.filter-btn:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Cuando está activo */
+.filter-btn.active-filter {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
