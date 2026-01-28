@@ -78,6 +78,17 @@ document.addEventListener('DOMContentLoaded', function () {
       '0': '𝟎', '1': '𝟏', '2': '𝟐', '3': '𝟑', '4': '𝟒', '5': '𝟓', '6': '𝟔', '7': '𝟕', '8': '𝟖', '9': '𝟗',
       ' ': ' ', '.': '.', ',': ',', '!': '!', '?': '?'
     },
+    'Monospace math': {
+      'a': '𝚊', 'b': '𝚋', 'c': '𝚌', 'd': '𝚍', 'e': '𝚎', 'f': '𝚏', 'g': '𝚐', 'h': '𝚑', 'i': '𝚒', 'j': '𝚓',
+      'k': '𝚔', 'l': '𝚕', 'm': '𝚖', 'n': '𝚗', 'ñ': 'ñ', 'o': '𝚘', 'p': '𝚙', 'q': '𝚚', 'r': '𝚛', 's': '𝚜',
+      't': '𝚝', 'u': '𝚞', 'v': '𝚟', 'w': '𝚠', 'x': '𝚡', 'y': '𝚢', 'z': '𝚣',
+      'A': '𝘈', 'B': '𝘉', 'C': '𝘊', 'D': '𝘋', 'E': '𝘌', 'F': '𝘍', 'G': '𝘎', 'H': '𝘏', 'I': '𝘐', 'J': '𝘑',
+      'K': '𝘒', 'L': '𝘓', 'M': '𝘔', 'N': '𝘕', 'Ñ': 'Ñ', 'O': '𝘖', 'P': '𝘗', 'Q': '𝘘', 'R': '𝘙', 'S': '𝘚',
+      'T': '𝘛', 'U': '𝘜', 'V': '𝘝', 'W': '𝘞', 'X': '𝘟', 'Y': '𝘠', 'Z': '𝘡',
+      '0': '𝟎', '1': '𝟏', '2': '𝟐', '3': '𝟑', '4': '𝟒', '5': '𝟓', '6': '𝟔', '7': '𝟕', '8': '𝟖', '9': '𝟗',
+      ' ': ' ', '.': '.', ',': ',', '!': '!', '?': '?'
+    },
+
     'Small': {
       'a': 'ᴀ', 'b': 'ʙ', 'c': 'ᴄ', 'd': 'ᴅ', 'e': 'ᴇ', 'f': 'ꜰ', 'g': 'ɢ', 'h': 'ʜ', 'i': 'ɪ', 'j': 'ᴊ',
       'k': 'ᴋ', 'l': 'ʟ', 'm': 'ᴍ', 'n': 'ɴ', 'o': 'ᴏ', 'p': 'ᴘ', 'q': 'ǫ', 'r': 'ʀ', 's': 'ꜱ', 't': 'ᴛ',
@@ -229,90 +240,179 @@ document.addEventListener('DOMContentLoaded', function () {
       '0': '𝟘', '1': '𝟙', '2': '𝟚', '3': '𝟛', '4': '𝟜', '5': '𝟝', '6': '𝟞', '7': '𝟟', '8': '𝟠', '9': '𝟡',
       ' ': ' ', '.': '.', ',': ',', '!': '!', '?': '?'
     },
+    'Bold': {
+      'a': '𝐚', 'b': '𝐛', 'c': '𝐜', 'd': '𝐝', 'e': '𝐞', 'f': '𝐟', 'g': '𝐠', 'h': '𝐡', 'i': '𝐢', 'j': '𝐣',
+      'k': '𝐤', 'l': '𝐥', 'm': '𝐦', 'n': '𝐧', 'ñ': 'ñ', 'o': '𝐨', 'p': '𝐩', 'q': '𝐪', 'r': '𝐫', 's': '𝐬',
+      't': '𝐭', 'u': '𝐮', 'v': '𝐯', 'w': '𝐰', 'x': '𝐱', 'y': '𝐲', 'z': '𝐳',
+      'A': '𝐀', 'B': '𝐁', 'C': '𝐂', 'D': '𝐃', 'E': '𝐄', 'F': '𝐅', 'G': '𝐆', 'H': '𝐇', 'I': '𝐈', 'J': '𝐉',
+      'K': '𝐊', 'L': '𝐋', 'M': '𝐌', 'N': '𝐍', 'Ñ': 'Ñ', 'O': '𝐎', 'P': '𝐏', 'Q': '𝐐', 'R': '𝐑', 'S': '𝐒',
+      'T': '𝐓', 'U': '𝐔', 'V': '𝐕', 'W': '𝐖', 'X': '𝐗', 'Y': '𝐘', 'Z': '𝐙',
+      '0': '𝟎', '1': '𝟏', '2': '𝟐', '3': '𝟑', '4': '𝟒', '5': '𝟓', '6': '𝟔', '7': '𝟕', '8': '𝟖', '9': '𝟗',
+      ' ': ' ', '.': '.', ',': ',', '!': '!', '?': '?'
+    },
+    'Italic Bold': {
+      'a': '𝒂', 'b': '𝒃', 'c': '𝒄', 'd': '𝒅', 'e': '𝒆', 'f': '𝒇', 'g': '𝒈', 'h': '𝒉', 'i': '𝒊', 'j': '𝒋',
+      'k': '𝒌', 'l': '𝒍', 'm': '𝒎', 'n': '𝒏', 'ñ': 'ñ', 'o': '𝒐', 'p': '𝒑', 'q': '𝒒', 'r': '𝒓', 's': '𝒔',
+      't': '𝒕', 'u': '𝒖', 'v': '𝒗', 'w': '𝒘', 'x': '𝒙', 'y': '𝒚', 'z': '𝒛',
+      'A': '𝑨', 'B': '𝑩', 'C': '𝑪', 'D': '𝑫', 'E': '𝑬', 'F': '𝑭', 'G': '𝑮', 'H': '𝑯', 'I': '𝑰', 'J': '𝑱',
+      'K': '𝑲', 'L': '𝑳', 'M': '𝑴', 'N': '𝑵', 'Ñ': 'Ñ', 'O': '𝑶', 'P': '𝑷', 'Q': '𝑸', 'R': '𝑹', 'S': '𝑺',
+      'T': '𝑻', 'U': '𝑼', 'V': '𝑽', 'W': '𝑾', 'X': '𝑿', 'Y': '𝒀', 'Z': '𝒁',
+      '0': '𝟎', '1': '𝟏', '2': '𝟐', '3': '𝟑', '4': '𝟒', '5': '𝟓', '6': '𝟔', '7': '𝟕', '8': '𝟖', '9': '𝟗',
+      ' ': ' ', '.': '.', ',': ',', '!': '!', '?': '?'
+    },
+    'Typewriter': {
+      'a': '𝚊', 'b': '𝚋', 'c': '𝚌', 'd': '𝚍', 'e': '𝚎', 'f': '𝚏', 'g': '𝚐', 'h': '𝚑', 'i': '𝚒', 'j': '𝚓',
+      'k': '𝚔', 'l': '𝚕', 'm': '𝚖', 'n': '𝚗', 'ñ': 'ñ', 'o': '𝚘', 'p': '𝚙', 'q': '𝚚', 'r': '𝚛', 's': '𝚜',
+      't': '𝚝', 'u': '𝚞', 'v': '𝚟', 'w': '𝚠', 'x': '𝚡', 'y': '𝚢', 'z': '𝚣',
+      'A': '𝙰', 'B': '𝙱', 'C': '𝙲', 'D': '𝙳', 'E': '𝙴', 'F': '𝙵', 'G': '𝙶', 'H': '𝙷', 'I': '𝙸', 'J': '𝙹',
+      'K': '𝙺', 'L': '𝙻', 'M': '𝙼', 'N': '𝙽', 'Ñ': 'Ñ', 'O': '𝙾', 'P': '𝙿', 'Q': '𝚀', 'R': '𝚁', 'S': '𝚂',
+      'T': '𝚃', 'U': '𝚄', 'V': '𝚅', 'W': '𝚆', 'X': '𝚇', 'Y': '𝚈', 'Z': '𝚉',
+      '0': '𝟎', '1': '𝟏', '2': '𝟐', '3': '𝟑', '4': '𝟒', '5': '𝟓', '6': '𝟔', '7': '𝟕', '8': '𝟖', '9': '𝟗',
+      ' ': ' ', '.': '.', ',': ',', '!': '!', '?': '?'
+    },
+    'Strikethrough': {
+      'a': 'a̶', 'b': 'b̶', 'c': 'c̶', 'd': 'd̶', 'e': 'e̶', 'f': 'f̶', 'g': 'g̶', 'h': 'h̶', 'i': 'i̶', 'j': 'j̶',
+      'k': 'k̶', 'l': 'l̶', 'm': 'm̶', 'n': 'n̶', 'ñ': 'ñ̶', 'o': 'o̶', 'p': 'p̶', 'q': 'q̶', 'r': 'r̶', 's': 's̶',
+      't': 't̶', 'u': 'u̶', 'v': 'v̶', 'w': 'w̶', 'x': 'x̶', 'y': 'y̶', 'z': 'z̶',
+      'A': 'A̶', 'B': 'B̶', 'C': 'C̶', 'D': 'D̶', 'E': 'E̶', 'F': 'F̶', 'G': 'G̶', 'H': 'H̶', 'I': 'I̶', 'J': 'J̶',
+      'K': 'K̶', 'L': 'L̶', 'M': 'M̶', 'N': 'N̶', 'Ñ': 'Ñ̶', 'O': 'O̶', 'P': 'P̶', 'Q': 'Q̶', 'R': 'R̶', 'S': 'S̶',
+      'T': 'T̶', 'U': 'U̶', 'V': 'V̶', 'W': 'W̶', 'X': 'X̶', 'Y': 'Y̶', 'Z': 'Z̶',
+      '0': '0̶', '1': '1̶', '2': '2̶', '3': '3̶', '4': '4̶', '5': '5̶', '6': '6̶', '7': '7̶', '8': '8̶', '9': '9̶',
+      ' ': ' ', '.': '.̶', ',': ',̶', '!': '!', '?': '?'
+    },
+    'Wavy strikethrough': {
+      'a': 'a̴', 'b': 'b̴', 'c': 'c̴', 'd': 'd̴', 'e': 'e̴', 'f': 'f̴', 'g': 'g̴', 'h': 'h̴', 'i': 'i̴', 'j': 'j̴',
+      'k': 'k̴', 'l': 'l̴', 'm': 'm̴', 'n': 'n̴', 'ñ': 'ñ̴', 'o': 'o̴', 'p': 'p̴', 'q': 'q̴', 'r': 'r̴', 's': 's̴',
+      't': 't̴', 'u': 'u̴', 'v': 'v̴', 'w': 'w̴', 'x': 'x̴', 'y': 'y̴', 'z': 'z̴',
+      'A': 'A̴', 'B': 'B̴', 'C': 'C̴', 'D': 'D̴', 'E': 'E̴', 'F': 'F̴', 'G': 'G̴', 'H': 'H̴', 'I': 'I̴', 'J': 'J̴',
+      'K': 'K̴', 'L': 'L̴', 'M': 'M̴', 'N': 'N̴', 'Ñ': 'Ñ̴', 'O': 'O̴', 'P': 'P̴', 'Q': 'Q̴', 'R': 'R̴', 'S': 'S̴',
+      'T': 'T̴', 'U': 'U̴', 'V': 'V̴', 'W': 'W̴', 'X': 'X̴', 'Y': 'Y̴', 'Z': 'Z̴',
+      '0': '0̴', '1': '1̴', '2': '2̴', '3': '3̴', '4': '4̴', '5': '5̴', '6': '6̴', '7': '7̴', '8': '8̴', '9': '9̴',
+      ' ': ' ', '.': '.̴', ',': ',̴', '!': '!', '?': '?'
+    },
+    'Unique': {
+      'a': 'ᗩ', 'b': 'ᗷ', 'c': 'ᑕ', 'd': 'ᗪ', 'e': 'E', 'f': 'ᖴ', 'g': 'G', 'h': 'ᕼ', 'i': 'I', 'j': 'ᒍ',
+      'k': 'K', 'l': 'ᒪ', 'm': 'ᗰ', 'n': 'ᑎ', 'ñ': 'ñ', 'o': 'O', 'p': 'ᑭ', 'q': 'ᑫ', 'r': 'ᖇ', 's': 'ᔕ',
+      't': 'T', 'u': 'ᑌ', 'v': 'ᐯ', 'w': 'ᗯ', 'x': '᙭', 'y': 'Y', 'z': 'ᘔ',
+      'A': 'ᗩ', 'B': 'ᗷ', 'C': 'ᑕ', 'D': 'ᗪ', 'E': 'E', 'F': 'ᖴ', 'G': 'G', 'H': 'ᕼ', 'I': 'I', 'J': 'ᒍ',
+      'K': 'K', 'L': 'ᒪ', 'M': 'ᗰ', 'N': 'ᑎ', 'Ñ': 'ñ', 'O': 'O', 'P': 'ᑭ', 'Q': 'ᑫ', 'R': 'ᖇ', 'S': 'ᔕ',
+      'T': 'T', 'U': 'ᑌ', 'V': 'ᐯ', 'W': 'ᗯ', 'X': '᙭', 'Y': 'Y', 'Z': 'ᘔ',
+      '0': '0', '1': '1', '2': '2', '3': '3', '4': '4', '5': '5', '6': '6', '7': '7', '8': '8', '9': '9',
+      ' ': ' ', '.': '.', ',': ',', '!': '!', '?': '?'
+    },
+
 
     // ADD MORE HERE: 'FONT': { 'a': '𝔸', ... }
   };
 
-function transformText(text, map) {
-  return text.split('').map(char => map[char] || char).join('');
-}
+  function transformText(text, map) {
+    return text.split('').map(char => map[char] || char).join('');
+  }
 
-function autoResize(textarea) {
-  textarea.style.height = "auto";
-  textarea.style.height = textarea.scrollHeight + "px";
-}
+  function autoResize(textarea) {
+    textarea.style.height = "auto";
+    textarea.style.height = textarea.scrollHeight + "px";
+  }
 
-// ============================
-// ACTUALIZAR SALIDAS
-// ============================
-function updateOutputs() {
-  const text = pendingText;
-  const outputs = document.querySelectorAll('.convertido textarea');
+  // ============================
+  // ACTUALIZAR SALIDAS
+  // ============================
+  function updateOutputs() {
+    const text = pendingText;
+    const outputs = document.querySelectorAll('.convertido textarea');
 
-  outputs.forEach(output => {
-    const label = output.closest('.convertido').querySelector('label');
-    if (label) {
-      const fontName = label.textContent.trim();
-      const map = fontMaps[fontName];
-      output.value = map ? transformText(text, map) : text;
+    outputs.forEach(output => {
+      const label = output.closest('.convertido').querySelector('label');
+      if (label) {
+        const fontName = label.textContent.trim();
+        const map = fontMaps[fontName];
+        output.value = map ? transformText(text, map) : text;
+      }
+      autoResize(output);
+    });
+  }
+
+  // ============================
+  // INPUT PRINCIPAL (#input)
+  // ============================
+  input.addEventListener('input', () => {
+    pendingText = input.value;
+
+    // auto‑resize del input principal
+    autoResize(input);
+
+    if (rafId === null) {
+      rafId = requestAnimationFrame(() => {
+        updateOutputs();
+        rafId = null;
+      });
     }
-    autoResize(output);
+  });
+
+  // Ajuste inicial al cargar
+  pendingText = input.value;
+  autoResize(input);
+  updateOutputs();
+
+  // ============================
+  // BOTÓN COPIAR + TOOLTIP
+  // ============================
+  document.addEventListener("click", e => {
+    if (e.target.classList.contains("copy-btn")) {
+
+      const block = e.target.closest(".convertido");
+      const textarea = block.querySelector("textarea");
+
+      navigator.clipboard.writeText(textarea.value);
+
+      // Si ya existe un tooltip, lo eliminamos
+      const oldTooltip = block.querySelector(".copy-tooltip");
+      if (oldTooltip) oldTooltip.remove();
+      // animación botón 
+      e.target.classList.add("copied"); 
+      setTimeout(() => e.target.classList.remove("copied"), 200);
+      // Crear tooltip
+      const tooltip = document.createElement("div");
+      tooltip.className = "copy-tooltip";
+      tooltip.textContent = "Copiado ✔";
+
+      block.appendChild(tooltip);
+
+      // Mostrar tooltip
+      requestAnimationFrame(() => {
+        tooltip.classList.add("show");
+      });
+
+      // Ocultar y eliminar después de 1.2s
+      setTimeout(() => {
+        tooltip.classList.remove("show");
+        setTimeout(() => tooltip.remove(), 250);
+      }, 1200);
+    }
+  })
+  const copyAllBtn = document.getElementById("copyAll");
+
+if (copyAllBtn) {
+  copyAllBtn.addEventListener("click", () => {
+    const outputs = document.querySelectorAll(".convertido textarea");
+    let text = "";
+
+    outputs.forEach(output => {
+      const label = output.closest(".convertido").querySelector("label");
+      const name = label ? label.textContent.trim() : "Fuente";
+      text += `${name}:\n${output.value}\n\n`;
+    });
+
+    navigator.clipboard.writeText(text);
+
+    copyAllBtn.textContent = "¡Todo copiado!";
+    copyAllBtn.classList.add("copied-all");
+
+    setTimeout(() => {
+      copyAllBtn.textContent = "Copiar todas las fuentes";
+      copyAllBtn.classList.remove("copied-all");
+    }, 1500);
   });
 }
 
-// ============================
-// INPUT PRINCIPAL (#input)
-// ============================
-input.addEventListener('input', () => {
-  pendingText = input.value;
-
-  // auto‑resize del input principal
-  autoResize(input);
-
-  if (rafId === null) {
-    rafId = requestAnimationFrame(() => {
-      updateOutputs();
-      rafId = null;
-    });
-  }
 });
-
-// Ajuste inicial al cargar
-pendingText = input.value;
-autoResize(input);
-updateOutputs();
-
-// ============================
-// BOTÓN COPIAR + TOOLTIP
-// ============================
-document.addEventListener("click", e => {
-  if (e.target.classList.contains("copy-btn")) {
-
-    const block = e.target.closest(".convertido");
-    const textarea = block.querySelector("textarea");
-
-    navigator.clipboard.writeText(textarea.value);
-
-    // Si ya existe un tooltip, lo eliminamos
-    const oldTooltip = block.querySelector(".copy-tooltip");
-    if (oldTooltip) oldTooltip.remove();
-
-    // Crear tooltip
-    const tooltip = document.createElement("div");
-    tooltip.className = "copy-tooltip";
-    tooltip.textContent = "Copiado ✔";
-
-    block.appendChild(tooltip);
-
-    // Mostrar tooltip
-    requestAnimationFrame(() => {
-      tooltip.classList.add("show");
-    });
-
-    // Ocultar y eliminar después de 1.2s
-    setTimeout(() => {
-      tooltip.classList.remove("show");
-      setTimeout(() => tooltip.remove(), 250);
-    }, 1200);
-  }
-})});

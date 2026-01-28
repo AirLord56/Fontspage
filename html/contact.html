@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto - FontsPage</title>
+    <meta name="description" content="Ponte en contacto con el equipo de FontsPage para dudas, sugerencias o propuestas.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="AirLord">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+    <header id="inicio">
+        <h1 class="title">Contacto</h1>
+        <p class="base_text">¿Tienes dudas, sugerencias o quieres proponer nuevas fuentes? Estoy encantado de leerte.</p>
+
+        <nav class="filter-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#contenido">Fuentes</a></li>
+                <li><a href="./contact.html" class="active">Contacto</a></li>
+                <li><a href="./about.html">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contacto" class="contact-section" role="region" aria-labelledby="contacto-titulo">
+
+            <h2 id="contacto-titulo">Envíame un mensaje</h2>
+
+            <p>
+                Si quieres ponerte en contacto conmigo, puedes hacerlo a través del siguiente formulario.
+                Intento responder lo antes posible. También puedes escribirme si deseas sugerir nuevas tipografías,
+                reportar un error o simplemente saludar.
+            </p>
+
+            <form class="contact-form" id="contactForm">
+
+                <label for="name">Nombre</label>
+                <input id="name" type="text" name="name" placeholder="Tu nombre" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="tucorreo@example.com" required>
+
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+                <button type="submit" class="send-btn">Enviar</button>
+            </form>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Made with ❤️ by AirLord</p>
+        <p>&copy; 2026 FontsPage</p>
+
+        <nav class="footer-links">
+            <a href="../index.html">Inicio</a> ·
+            <a href="../index.html#contenido">Fuentes</a> ·
+            <a href="./contact.html">Contacto</a> ·
+            <a href="./about.html">Sobre Nosotros</a>
+        </nav>
+    </footer>
+
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <h3>¡Mensaje enviado!</h3>
+            <p>Gracias por ponerte en contacto. Te responderé lo antes posible.</p>
+            <button id="closePopup" class="popup-btn">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Scripts optimizados -->
+    <script src="../js/particles.js-master/particles.js" defer></script>
+    <script src="../js/particles.js-master/app.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
+</body>
+</html>

@@ -5,8 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/style.css">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<title>Fonts Page - Change your text to different fonts</title>
+	<link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+	<title>Fonts Page - Conversor de Letras</title>
+	<meta name="description"
+		content="Convierte tus textos en estilos únicos con nuestro conversor de letras y fuentes. Ideal para redes sociales, juegos, nicks y diseños.">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="AirLord">
 </head>
 
 <body>
@@ -36,163 +40,301 @@
 		<section>
 			<!-- Text to convert. -->
 			<div class="conversor">
-				<label for="input"></label>
 				<textarea id="input" placeholder="Introduce tu texto aquí..."></textarea>
 			</div>
-			<!-- Converted Fonts. -->
-			<!-- BOLD -->
+
+			<button id="copyAll" class="copy-all-btn">Copiar todas las fuentes</button>
+
+			<!-- CUSTOM FONTS -->
+			<div class="convertido" data-type="bold">
+				<label>Bold</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="bold italic">
+				<label>Italic Bold</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Typewriter</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Strikethrough</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Wavy strikethrough</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Unique</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
 			<div class="convertido" data-type="bold">
 				<label>Mathematical bold</label>
-				<textarea readOnly></textarea>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
 			<div class="convertido" data-type="italic">
-				<label for="MathIT">Mathematical italic</label>
-				<textarea readOnly></textarea>
+				<label>Mathematical italic</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
-			<div class="convertido" data-type="bold" data-type="italic">
-				<label for="boldMathIT">Mathematical bold italic</label>
-				<textarea readOnly></textarea>
+			<div class="convertido" data-type="bold italic">
+				<label>Mathematical bold italic</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
-			<!-- STYLED -->
 			<div class="convertido" data-type="styled">
-				<label for="MathScript">Mathematical script</label>
-				<textarea readOnly></textarea>
+				<label>Mathematical script</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
 			<div class="convertido" data-type="bold">
-				<label for="boldMathScript">Mathematical bold script</label>
-				<textarea readOnly></textarea>
+				<label>Mathematical bold script</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
 			<div class="convertido" data-type="styled">
-				<label for="MathFraktur">Mathematical fraktur</label>
-				<textarea readOnly></textarea>
+				<label>Mathematical fraktur</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
 			<div class="convertido" data-type="bold">
-				<label for="boldMathFraktur">Mathematical bold fraktur</label>
-				<textarea readOnly></textarea>
-				<button class="copy-btn" aria-label="Copiar"></button>
-			</div>
-
-			<div class="convertido" data-type="styled">
-				<label for="small">Small</label>
-				<textarea readOnly></textarea>
-				<button class="copy-btn" aria-label="Copiar"></button>
-			</div>
-
-			<div class="convertido" data-type="styled">
-				<label for="circled">Circled</label>
-				<textarea readOnly></textarea>
-				<button class="copy-btn" aria-label="Copiar"></button>
-			</div>
-
-			<div class="convertido" data-type="styled">
-				<label for="NegativeCircled">Negative Circled</label>
-				<textarea readOnly></textarea>
-				<button class="copy-btn" aria-label="Copiar"></button>
-			</div>
-
-			<div class="convertido" data-type="styled">
-				<label for="squared">Squared</label>
-				<textarea readOnly></textarea>
-				<button class="copy-btn" aria-label="Copiar"></button>
-			</div>
-
-			<div class="convertido" data-type="styled">
-				<label for="NegativeSquared">Negative Squared</label>
-				<textarea readOnly></textarea>
-				<button class="copy-btn" aria-label="Copiar"></button>
-			</div>
-
-			<!-- OTHERS -->
-			<div class="convertido" data-type="others">
-				<label for="superscript">Superscript</label>
-				<textarea readOnly></textarea>
+				<label>Mathematical bold fraktur</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
 			<div class="convertido" data-type="others">
-				<label for="subscript">Subscript</label>
-				<textarea readOnly></textarea>
+				<label>Monospace math</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
 			<div class="convertido" data-type="styled">
-				<label for="scribble">Scribble</label>
-				<textarea readOnly></textarea>
+				<label>Small</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
 			<div class="convertido" data-type="styled">
-				<label for="BigScribble">Big Scribble</label>
-				<textarea readOnly></textarea>
-				<button class="copy-btn" aria-label="Copiar"></button>
-			</div>
-
-			<div class="convertido" data-type="others">
-				<label for="inverse">Inverse</label>
-				<textarea readOnly></textarea>
+				<label>Circled</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
 			<div class="convertido" data-type="styled">
-				<label for="outlined">Outlined</label>
-				<textarea readOnly></textarea>
-				<button class="copy-btn" aria-label="Copiar"></button>
-			</div>
-
-			<div class="convertido" data-type="others">
-				<label for="RegionalIndicator">Regional Indicator</label>
-				<textarea readOnly></textarea>
-				<button class="copy-btn" aria-label="Copiar"></button>
-			</div>
-
-			<div class="convertido" data-type="others">
-				<label for="FullWidth">Full Width</label>
-				<textarea readOnly></textarea>
+				<label>Negative Circled</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
 			<div class="convertido" data-type="styled">
-				<label for="brackets">Brackets</label>
-				<textarea readOnly></textarea>
+				<label>Squared</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Negative Squared</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 
 			<div class="convertido" data-type="others">
-				<label for="DoubleStruck">Double Struck</label>
-				<textarea readOnly></textarea>
+				<label>Superscript</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Subscript</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Scribble</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Big Scribble</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Inverse</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Outlined</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Regional Indicator</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Full Width</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Brackets</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Double Struck</label>
+				<textarea readonly></textarea>
 				<button class="copy-btn" aria-label="Copiar"></button>
 			</div>
 		</section>
+		<section id="contenido" role="region" aria-labelledby="contenido-titulo">
+			<h2 id="contenido-titulo">Convierte tu Texto en Estilos Únicos</h2>
 
-		<section id="contenido">
-			<h2>¿Cómo funciona?</h2>
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni alias officia quibusdam perferendis?
-				Ullam dolores minima nostrum velit asperiores sequi sed nulla nobis iste? Nulla nihil id libero quos
-				tenetur.</p>
+			<p>
+				¿Quieres que tus palabras destaquen? Este conversor de fuentes está diseñado para transformar cualquier
+				texto en estilos llamativos, creativos y totalmente personalizados. Desde letras elegantes hasta
+				tipografías llamativas, aquí encontrarás una forma diferente de expresarte.
+			</p>
+
+			<p>
+				Puedes usar las +30 fuentes generadas en prácticamente cualquier plataforma:
+				<a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>,
+				<a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a>,
+				<a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">WhatsApp</a>,
+				<a href="https://www.twitch.tv" target="_blank" rel="noopener noreferrer">Twitch</a>,
+				<a href="https://twitter.com" target="_blank" rel="noopener noreferrer">X (Twitter)</a>,
+				<a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>,
+				<a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a>,
+				biografías, títulos, diseños y también videojuegos como
+				<a href="https://www.minecraft.net" target="_blank" rel="noopener noreferrer">Minecraft</a>,
+				<a href="https://www.fortnite.com" target="_blank" rel="noopener noreferrer">Fortnite</a>,
+				<a href="https://ff.garena.com" target="_blank" rel="noopener noreferrer">Free Fire</a>,
+				<a href="https://www.roblox.com" target="_blank" rel="noopener noreferrer">Roblox</a>
+				o cualquier otro lugar donde quieras destacar tu texto.
+				Solo escribe, elige un estilo y copia el resultado.
+			</p>
+
+
+			<h3>¿Por Qué Usar Este Conversor?</h3>
+
+			<p>
+				Nuestro objetivo es que puedas convertir texto de forma rápida, segura y sin complicaciones. No
+				almacenamos lo que escribes ni guardamos tus estilos. Todo ocurre directamente en tu navegador, sin
+				riesgos y sin esperas.
+			</p>
+
+			<ul>
+				<li><strong>Gran variedad de fuentes:</strong> estilos modernos, clásicos, decorativos, minimalistas y
+					más.</li>
+				<li><strong>Personalización instantánea:</strong> escribe una vez y obtén decenas de variantes al
+					momento.</li>
+				<li><strong>Interfaz sencilla:</strong> pensada para que copies y pegues sin perder tiempo.</li>
+			</ul>
+
+			<h3>¿Cómo Funciona?</h3>
+
+			<p>
+				Usar este conversor es tan simple como escribir. En la parte superior tienes un cuadro donde puedes
+				introducir tu texto. A medida que escribes, todas las fuentes se generan automáticamente.
+			</p>
+
+			<ol>
+				<li>Escribe tu texto en el campo principal.</li>
+				<li>Explora las fuentes disponibles y elige tus favoritas.</li>
+				<li>Copia el estilo que más te guste y úsalo donde quieras.</li>
+			</ol>
+
+			<h3>¿Qué Hace Posible la Conversión?</h3>
+
+			<p>
+				Aunque parezca magia, todo se basa en Unicode: un estándar que permite representar miles de símbolos,
+				letras y caracteres especiales. Nuestro sistema toma tu texto y lo transforma en variantes visuales
+				usando combinaciones de caracteres Unicode compatibles con la mayoría de aplicaciones.
+			</p>
+
+			<h3>¿Qué Tipos de Letras Puedes Crear?</h3>
+
+			<p>
+				Aquí encontrarás estilos para todos los gustos: negritas potentes, cursivas elegantes, letras góticas,
+				símbolos decorativos, estilos cuadrados, tachados, ondulados, orientales, manuscritos y muchos más. Cada
+				tipografía está pensada para dar personalidad a tus mensajes.
+			</p>
+
+			<p>
+				Además, añadimos nuevas fuentes con frecuencia. Si echas en falta algún estilo, puedes sugerirlo y lo
+				añadiremos en futuras actualizaciones.
+			</p>
+
+			<h3>El Generador de Letras que Necesitas</h3>
+
+			<p>
+				Existen muchos conversores de texto, pero pocos tan rápidos y completos como este. Aquí puedes generar
+				letras bonitas, creativas y listas para copiar con un solo clic. Ya sea para redes sociales, juegos,
+				diseños o simplemente para divertirte, este es tu espacio para experimentar con estilos únicos.
+			</p>
+
+			<h3>¡Empieza a Transformar tus Palabras!</h3>
+
+			<p>
+				No esperes más. Escribe tu texto, elige un estilo y dale un toque especial a tus mensajes. ¡Haz que tus
+				palabras brillen!
+			</p>
 		</section>
+
 	</main>
-
-	<footer>
+	<footer class="site-footer">
+		<p>Made with ❤️ by AirLord</p>
 		<p>&copy; 2026 FontsPage</p>
+
+		<nav class="footer-links">
+			<a href="#inicio">Inicio</a> ·
+			<a href="#contenido">Fuentes</a> ·
+			<a href="./html/contact.html">Contacto</a> ·
+			<a href="./html/about.html">Sobre Nosotros</a>
+		</nav>
 	</footer>
 
-	<script src="js/dupe.js"></script>
-	<script src="js/fonts.js"></script>
-	<script src="js/particles.js-master/particles.js"></script>
-	<script src="js/particles.js-master/app.js"></script>
-	<script src="js/filters.js"></script>
+	<button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">⬆</button>
+
+	<script src="js/dupe.js" type="text/javascript" defer></script>
+	<script src="js/fonts.js" type="text/javascript"></script>
+	<script src="js/particles.js-master/particles.js" type="text/javascript" defer></script>
+	<script src="js/particles.js-master/app.js" type="text/javascript" defer></script>
+	<script src="js/filters.js" type="text/javascript" defer></script>
+	<script src="js/main.js" type="text/javascript" defer></script>
 
 </body>
 
