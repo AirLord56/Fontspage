@@ -236,41 +236,24 @@ label[for="input"] {
 }
 
 .copy-btn {
-  width: 32px !important;
-  height: 32px !important;
-  border-radius: 6px !important;
-  border: 1px solid var(--primary-color) !important;
-  background: #1f1f1f !important;
-  color: white !important;
-  cursor: pointer !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 18px !important;
-  position: absolute !important;
-  top: 10px !important;
-  right: 10px !important;
-  transition: all 0.2s ease !important;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid var(--primary-color);
+  background: #1f1f1f;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  transition: all 0.2s ease;
+  z-index: 10;
 }
 
-.copy-btn {
-  position: absolute !important;
-  top: 25% !important;
-  right: 1% !important;
-  width: 28px !important;
-  height: 28px !important;
-  border-radius: 6px !important;
-  border: 1px solid var(--primary-color) !important;
-  background: #1f1f1f !important;
-  color: white !important;
-  cursor: pointer !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 16px !important;
-  z-index: 9999 !important;
-  transition: all 0.2s ease !important;
-}
 
 .copy-btn::before {
   content: "📋" !important;
@@ -490,6 +473,7 @@ label[for="input"] {
 }
 .convertido {
   transition: opacity 0.25s ease, transform 0.25s ease;
+  position: relative;
 }
 
 .convertido.hidden {
@@ -743,6 +727,58 @@ label[for="input"] {
 .popup-btn:hover {
   background: var(--primary-color);
   box-shadow: 0 0 12px var(--primary-color);
+}
+
+.fav-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid var(--primary-color);
+  background: #1f1f1f;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  position: absolute;
+  top: 58px; /* justo debajo del copy */
+  right: 10px;
+  transition: all 0.2s ease;
+  z-index: 9999 !important;
+}
+
+
+
+.fav-btn.favorito {
+    color: gold;
+    text-shadow: 0 0 5px gold;
+}
+
+
+.popup-fav {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #222;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 6px;
+    opacity: 0.95;
+    font-size: 15px;
+    animation: fadeInOut 1.5s ease;
+    z-index: 9999;
+}
+.fav-btn:hover {
+  background: var(--primary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(10px); }
 }
 
 
