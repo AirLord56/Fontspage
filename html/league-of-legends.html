@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+	<link rel="canonical" href="https://fontspage.com/lol">
+
+	<title>Fuentes para League of Legends (LoL) - FontsPage</title>
+	<meta name="description"
+		content="Genera letras y fuentes para League of Legends. Personaliza tu nombre, club, chat, perfiles y equipos con estilos únicos.">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="AirLord">
+
+	<meta property="og:title" content="Fuentes para League of Legends - FontsPage">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://fontspage.com/lol">
+	<meta property="og:image" content="../images/opengraph.png">
+	<meta property="og:site_name" content="FontsPage">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Fuentes para League of Legends - FontsPage">
+	<meta name="twitter:image" content="../images/opengraph.png">
+
+	<script type="application/ld+json">
+		{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+			"@type": "Organization",
+			"@id": "https://fontspage.com/#organization",
+			"name": "FontsPage",
+			"url": "https://fontspage.com/",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://fontspage.com/images/logo.png"
+			},
+			"sameAs": [
+				"https://www.instagram.com/",
+				"https://www.tiktok.com/",
+				"https://twitter.com/"
+			]
+			},
+			{
+			"@type": "WebSite",
+			"@id": "https://fontspage.com/#website",
+			"url": "https://fontspage.com/",
+			"name": "FontsPage",
+			"publisher": {
+				"@id": "https://fontspage.com/#organization"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://fontspage.com/?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			}
+			},
+			{
+			"@type": "BreadcrumbList",
+			"@id": "https://fontspage.com/#breadcrumbs",
+			"itemListElement": [
+				{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Inicio",
+				"item": "https://fontspage.com/"
+				}
+			]
+			}
+		]
+		}
+	</script>
+
+	<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Fuentes para League of Legends - FontsPage",
+        "url": "https://fontspage.com/lol",
+        "description": "Genera letras y fuentes para League of Legends. Personaliza tu nombre, club, chat, perfiles y equipos con estilos únicos."
+    }
+    </script>
+
+	<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cómo usar FontsPage para League of Legends?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Escribe tu texto, elige un estilo y cópialo. Luego pégalo en tu nombre, club, chat o perfil de League of Legends."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Puedo usar estas letras en mi nombre de LoL?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, puedes usar estas letras en tu nombre, club, chat y perfiles. Algunos caracteres Unicode pueden no ser compatibles en todas las regiones."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Funcionan estas fuentes en todas las regiones de LoL?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La mayoría de estilos funcionan en EUW, EUNE, NA, LAN y LAS. Algunas regiones pueden limitar ciertos símbolos Unicode."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Es gratis usar FontsPage para LoL?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, FontsPage es completamente gratuito y no requiere registro."
+                }
+            }
+        ]
+    }
+    </script>
+
+</head>
+
+<body>
+	<div id="particles-js"> </div>
+
+	<header>
+		<div class="logo-header">
+			<a href="../index.html" aria-label="Ir a la página principal">
+				<img src="../images/logo.png" alt="Logo FontsPage">
+			</a>
+		</div>
+
+		<h1 class="title">
+			Fuentes para League of Legends
+		</h1>
+
+		<div class="base_text">
+			Crea letras únicas para tu nombre, club, chat y perfil de League of Legends.<br>
+			Escribe, elige un estilo y copia al instante.
+		</div>
+
+		<nav class="filter-nav" role="navigation">
+			<ul>
+				<button class="filter-btn" data-filter="italic">Italics</button>
+				<button class="filter-btn" data-filter="bold">Bolds</button>
+				<button class="filter-btn" data-filter="styled">Styled</button>
+				<button class="filter-btn" data-filter="others">Others</button>
+				<button class="filter-btn" id="btnFavoritos" data-filter="favoritos">Favoritos</button>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section>
+			<!-- Text to convert. -->
+			<div class="conversor">
+				<textarea id="input" aria-label="Introduce tu texto para convertirlo"
+					placeholder="Introduce tu texto aquí..."></textarea>
+			</div>
+
+			<button id="copyAll" class="copy-all-btn">Copiar todas las fuentes</button>
+
+			<!-- CUSTOM FONTS -->
+			<div class="convertido" data-type="bold">
+				<label>Bold</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="bold italic">
+				<label>Italic Bold</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Typewriter</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Strikethrough</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Wavy strikethrough</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Unique</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="bold">
+				<label>Mathematical bold</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="italic">
+				<label>Mathematical italic</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="bold italic">
+				<label>Mathematical bold italic</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Mathematical script</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="bold">
+				<label>Mathematical bold script</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Mathematical fraktur</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="bold">
+				<label>Mathematical bold fraktur</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Monospace math</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Small</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Circled</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Negative Circled</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Squared</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Negative Squared</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Superscript</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Subscript</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Scribble</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Big Scribble</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Inverse</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Outlined</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Regional Indicator</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Full Width</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="styled">
+				<label>Brackets</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+
+			<div class="convertido" data-type="others">
+				<label>Double Struck</label>
+				<textarea readonly></textarea>
+				<button class="copy-btn" aria-label="Copiar"></button>
+				<button class="fav-btn" aria-label="Añadir a favoritos">☆</button>
+			</div>
+		</section>
+
+
+		<section id="contenido" role="region" aria-labelledby="contenido-titulo">
+			<h2 id="contenido-titulo">Cómo usar estas letras en League of Legends</h2>
+
+			<p>
+				Usar estas fuentes en LoL es muy sencillo: escribe tu texto, elige un estilo y cópialo. Luego pégalo en
+				tu
+				nombre, club, chat o perfil del juego.
+			</p>
+
+			<p>
+				Estas fuentes funcionan en la mayoría de regiones y plataformas. Algunos caracteres Unicode pueden
+				variar
+				según el servidor.
+			</p>
+
+			<h3>Ideas para LoL</h3>
+
+			<ul>
+				<li><strong>Nombre:</strong> haz tu nick más llamativo.</li>
+				<li><strong>Club:</strong> crea nombres de equipo únicos.</li>
+				<li><strong>Chat:</strong> destaca frases importantes o creativas.</li>
+				<li><strong>Perfiles:</strong> añade estilo a tu tarjeta de invocador.</li>
+				<li><strong>Equipos:</strong> personaliza nombres para torneos o scrims.</li>
+			</ul>
+
+			<h3>¿Por qué funciona?</h3>
+
+			<p>
+				League of Legends soporta Unicode en la mayoría de contextos, lo que permite que estas letras se vean
+				correctamente en nombres, chats y perfiles.
+			</p>
+		</section>
+		<section class="related-links">
+			<h3>También te puede interesar</h3>
+			<ul>
+				<li><a href="./valorant.html">Fuentes para Valorant</a></li>
+				<li><a href="./fortnite.html">Fuentes para Fortnite</a></li>
+				<li><a href="./brawl-stars.html">Fuentes para Brawl Stars</a></li>
+				<li><a href="./free-fire.html">Fuentes para Free Fire</a></li>
+				<li><a href="./roblox.html">Fuentes para Roblox</a></li>
+				<li><a href="./minecraft.html">Fuentes para Minecraft</a></li>
+				<li><a href="./todas-las-fuentes.html">Ver todas las fuentes</a></li>
+			</ul>
+		</section>
+
+	</main>
+
+	<footer class="site-footer">
+		<p>Made with ❤️ by AirLord</p>
+		<p>&copy; 2026 FontsPage</p>
+
+		<nav class="footer-links">
+			<a href="../index.html">Inicio</a> ·
+			<a href="#contenido">Fuentes</a> ·
+			<a href="./contact.html">Contacto</a> ·
+			<a href="./about.html">Sobre Nosotros</a>
+		</nav>
+	</footer>
+
+	<button id="scrollTopBtn" class="scroll-top-btn">⬆</button>
+
+	<script src="../js/dupe.js" defer></script>
+	<script src="../js/fonts.js"></script>
+	<script src="../js/particles.js-master/particles.js" defer></script>
+	<script src="../js/particles.js-master/app.js" defer></script>
+	<script src="../js/filters.js" defer></script>
+	<script src="../js/main.js" defer></script>
+
+</body>
+
+</html>

@@ -90,7 +90,7 @@ function mostrarSoloFavoritos() {
   const blocks = document.querySelectorAll(".convertido");
 
   blocks.forEach(block => {
-    const nombre = block.querySelector(".font-title").textContent;
+    const nombre = block.querySelector("label").textContent;
     const texto = block.querySelector("textarea").value;
 
     const esFav = favoritos.some(f => f.nombre === nombre && f.texto === texto);

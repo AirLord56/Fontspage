@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Bloqueo de carpetas que no aportan SEO
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+Disallow: /fonts/
+
+# Bloqueo de archivos internos o sensibles (si los hubiera)
+Disallow: /private/
+Disallow: /tmp/
+
+# Evitar indexar parámetros o duplicados
+Disallow: /*?*
+Disallow: /*&*
+
+# Sitemap principal
+Sitemap: https://fontspage.com/sitemap.xml
