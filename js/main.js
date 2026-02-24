@@ -63,6 +63,7 @@ const input = document.getElementById("input");
 
 input.addEventListener("input", () => {
     localStorage.setItem("ultimoTexto", input.value);
+    document.getElementById("charCount").textContent = input.value.length + " caracteres";
 });
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -70,6 +71,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (guardado) {
         input.value = guardado;
         actualizarFuentes(guardado);
+        document.getElementById("charCount").textContent = guardado.length + " caracteres";
     }
 });
 

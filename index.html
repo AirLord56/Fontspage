@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- Seguir mejorando el SEO de la página y revisar el texto de cada página-->
 
 <head>
 	<meta charset="UTF-8">
@@ -183,12 +184,16 @@
 		</div>
 		<nav class="filter-nav" role="navigation">
 			<ul>
-				<button class="filter-btn" data-filter="italic" aria-label="Mostrar fuentes en cursiva">Italics</button>
-				<button class="filter-btn" data-filter="bold" aria-label="Mostrar fuentes en negrita">Bolds</button>
-				<button class="filter-btn" data-filter="styled" aria-label="Mostrar fuentes decoradas">Styled</button>
-				<button class="filter-btn" data-filter="others" aria-label="Mostrar otros estilos">Others</button>
-				<button class="filter-btn" id="btnFavoritos" data-filter="favoritos"
-					aria-label="Mostrar favoritos">Favoritos</button>
+				<li><button class="filter-btn" data-filter="italic"
+						aria-label="Mostrar fuentes en cursiva">Italics</button></li>
+				<li><button class="filter-btn" data-filter="bold" aria-label="Mostrar fuentes en negrita">Bolds</button>
+				</li>
+				<li><button class="filter-btn" data-filter="styled"
+						aria-label="Mostrar fuentes decoradas">Styled</button></li>
+				<li><button class="filter-btn" data-filter="others" aria-label="Mostrar otros estilos">Others</button>
+				</li>
+				<li><button class="filter-btn" id="btnFavoritos" data-filter="favoritos"
+						aria-label="Mostrar favoritos">Favoritos</button></li>
 			</ul>
 		</nav>
 
@@ -201,6 +206,7 @@
 			<div class="conversor">
 				<textarea id="input" aria-label="Introduce tu texto para convertirlo"
 					placeholder="Introduce tu texto aquí..."></textarea>
+				<span id="charCount">0 caracteres</span>
 			</div>
 
 			<button id="copyAll" class="copy-all-btn">Copiar todas las fuentes</button>
@@ -522,7 +528,7 @@
 			<ul>
 				<li><a href="./html/tiktok.html">Fuentes para TikTok</a></li>
 				<li><a href="./html/x.html">Fuentes para X (Twitter)</a></li>
-				<li><a href="./html/twtich.html">Fuentes para Twitch</a></li>
+				<li><a href="./html/twitch.html">Fuentes para Twitch</a></li>
 				<li><a href="./html/discord.html">Fuentes para Discord</a></li>
 				<li><a href="./html/todas-las-fuentes.html">Ver todas las fuentes</a></li>
 			</ul>
@@ -538,18 +544,93 @@
 			<a href="#inicio">Inicio</a> ·
 			<a href="#contenido">Fuentes</a> ·
 			<a href="./html/contact.html">Contacto</a> ·
-			<a href="./html/about.html">Sobre Nosotros</a>
+			<a href="./html/about.html">Sobre Nosotros</a> ·
+			<a href="./html/privacidad.html">Privacidad</a>
 		</nav>
 	</footer>
 
 	<button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">⬆</button>
+	<button id="cookieSettingsBtn" class="cookie-settings-btn" aria-label="Configurar cookies">🍪</button>
+
+	<!-- ================================
+     BANNER DE COOKIES
+	================================ -->
+	<div id="cookieBanner">
+		<div class="cookie-banner-inner">
+			<div class="cookie-banner-text">
+				<p>
+					Usamos cookies propias y de terceros (Google Analytics, Google AdSense) para mejorar
+					la experiencia y mostrar publicidad relevante que mantiene FontsPage gratuito.
+					Puedes aceptarlas, rechazarlas o configurarlas.
+					<a href="./html/privacidad.html" target="_blank">Más información</a>
+				</p>
+			</div>
+			<div class="cookie-banner-btns">
+				<button id="cookieConfig" class="cookie-btn cookie-btn-config">Configurar</button>
+				<button id="cookieRechazar" class="cookie-btn cookie-btn-rechazar">Rechazar</button>
+				<button id="cookieAceptar" class="cookie-btn cookie-btn-aceptar">Aceptar todo</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- MODAL DE CONFIGURACIÓN -->
+	<div id="cookieModal">
+		<div class="cookie-modal-content">
+			<h3>Configurar cookies</h3>
+			<p>Activa o desactiva cada tipo de cookie. Las cookies necesarias siempre están activas.</p>
+
+			<!-- Necesarias (siempre on) -->
+			<div class="cookie-opcion">
+				<div class="cookie-opcion-info">
+					<strong>Cookies necesarias</strong>
+					<span>Favoritos, último texto, preferencias de cookies.</span>
+				</div>
+				<label class="cookie-toggle">
+					<input type="checkbox" checked disabled>
+					<span class="cookie-toggle-slider"></span>
+				</label>
+			</div>
+
+			<!-- Analytics -->
+			<div class="cookie-opcion">
+				<div class="cookie-opcion-info">
+					<strong>Google Analytics</strong>
+					<span>Estadísticas anónimas de uso de la web.</span>
+				</div>
+				<label class="cookie-toggle">
+					<input type="checkbox" id="toggleAnalytics" checked>
+					<span class="cookie-toggle-slider"></span>
+				</label>
+			</div>
+
+			<!-- Publicidad -->
+			<div class="cookie-opcion">
+				<div class="cookie-opcion-info">
+					<strong>Google AdSense</strong>
+					<span>Publicidad personalizada que financia el servicio.</span>
+				</div>
+				<label class="cookie-toggle">
+					<input type="checkbox" id="toggleAds" checked>
+					<span class="cookie-toggle-slider"></span>
+				</label>
+			</div>
+
+			<div class="cookie-modal-btns">
+				<button id="cookieCerrarModal" class="cookie-btn cookie-btn-rechazar">Cancelar</button>
+				<button id="cookieGuardar" class="cookie-btn cookie-btn-aceptar">Guardar preferencias</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/cookies.js" defer></script>
 
 	<script src="js/dupe.js" type="text/javascript" defer></script>
-	<script src="js/fonts.js" type="text/javascript"></script>
+	<script src="js/fonts.js" type="text/javascript" defer></script>
 	<script src="js/particles.js-master/particles.js" type="text/javascript" defer></script>
 	<script src="js/particles.js-master/app.js" type="text/javascript" defer></script>
 	<script src="js/filters.js" type="text/javascript" defer></script>
 	<script src="js/main.js" type="text/javascript" defer></script>
+	<script src="js/cookies.js" type="text/javascript" defer></script>
 
 </body>
 

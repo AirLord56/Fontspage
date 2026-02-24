@@ -147,11 +147,12 @@
 
 		<nav class="filter-nav" role="navigation">
 			<ul>
-				<button class="filter-btn" data-filter="italic">Italics</button>
-				<button class="filter-btn" data-filter="bold">Bolds</button>
-				<button class="filter-btn" data-filter="styled">Styled</button>
-				<button class="filter-btn" data-filter="others">Others</button>
-				<button class="filter-btn" id="btnFavoritos" data-filter="favoritos">Favoritos</button>
+				<li><button class="filter-btn" data-filter="italic">Italics</button></li>
+				<li><button class="filter-btn" data-filter="bold">Bolds</button></li>
+				<li><button class="filter-btn" data-filter="styled">Styled</button></li>
+				<li><button class="filter-btn" data-filter="others">Others</button></li>
+				<li><button class="filter-btn" id="btnFavoritos" data-filter="favoritos">Favoritos</button></li>
+			
 			</ul>
 		</nav>
 	</header>
@@ -419,27 +420,90 @@
 
 		</main>
 
-		<footer class="site-footer">
-			<p>Made with ❤️ by AirLord</p>
-			<p>&copy; 2026 FontsPage</p>
-
-			<nav class="footer-links">
-				<a href="../index.html">Inicio</a> ·
-				<a href="#contenido">Fuentes</a> ·
-				<a href="./contact.html">Contacto</a> ·
-				<a href="./about.html">Sobre Nosotros</a>
-			</nav>
-		</footer>
-
-		<button id="scrollTopBtn" class="scroll-top-btn">⬆</button>
-
-		<script src="../js/dupe.js" defer></script>
-		<script src="../js/fonts.js"></script>
-		<script src="../js/particles.js-master/particles.js" defer></script>
-		<script src="../js/particles.js-master/app.js" defer></script>
-		<script src="../js/filters.js" defer></script>
-		<script src="../js/main.js" defer></script>
-
 </body>
 
+
+	<footer class="site-footer">
+		<p>Made with ❤️ by AirLord</p>
+		<p>&copy; 2026 FontsPage</p>
+		<nav class="footer-links">
+			<a href="../index.html">Inicio</a> ·
+			<a href="#contenido">Fuentes</a> ·
+			<a href="./contact.html">Contacto</a> ·
+			<a href="./about.html">Sobre Nosotros</a> ·
+			<a href="./privacidad.html">Privacidad</a>
+		</nav>
+	</footer>
+
+	<button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">⬆</button>
+
+	<button id="cookieSettingsBtn" class="cookie-settings-btn" aria-label="Configurar cookies">🍪</button>
+
+	<!-- BANNER DE COOKIES -->
+	<div id="cookieBanner">
+		<div class="cookie-banner-inner">
+			<div class="cookie-banner-text">
+				<p>
+					Usamos cookies propias y de terceros (Google Analytics, Google AdSense) para mejorar
+					la experiencia y mostrar publicidad relevante que mantiene FontsPage gratuito.
+					Puedes aceptarlas, rechazarlas o configurarlas.
+					<a href="./privacidad.html" target="_blank">Más información</a>
+				</p>
+			</div>
+			<div class="cookie-banner-btns">
+				<button id="cookieConfig" class="cookie-btn cookie-btn-config">Configurar</button>
+				<button id="cookieRechazar" class="cookie-btn cookie-btn-rechazar">Rechazar</button>
+				<button id="cookieAceptar" class="cookie-btn cookie-btn-aceptar">Aceptar todo</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- MODAL DE CONFIGURACIÓN -->
+	<div id="cookieModal">
+		<div class="cookie-modal-content">
+			<h3>Configurar cookies</h3>
+			<p>Activa o desactiva cada tipo de cookie. Las cookies necesarias siempre están activas.</p>
+			<div class="cookie-opcion">
+				<div class="cookie-opcion-info">
+					<strong>Cookies necesarias</strong>
+					<span>Favoritos, último texto, preferencias de cookies.</span>
+				</div>
+				<label class="cookie-toggle">
+					<input type="checkbox" checked disabled>
+					<span class="cookie-toggle-slider"></span>
+				</label>
+			</div>
+			<div class="cookie-opcion">
+				<div class="cookie-opcion-info">
+					<strong>Google Analytics</strong>
+					<span>Estadísticas anónimas de uso de la web.</span>
+				</div>
+				<label class="cookie-toggle">
+					<input type="checkbox" id="toggleAnalytics" checked>
+					<span class="cookie-toggle-slider"></span>
+				</label>
+			</div>
+			<div class="cookie-opcion">
+				<div class="cookie-opcion-info">
+					<strong>Google AdSense</strong>
+					<span>Publicidad personalizada que financia el servicio.</span>
+				</div>
+				<label class="cookie-toggle">
+					<input type="checkbox" id="toggleAds" checked>
+					<span class="cookie-toggle-slider"></span>
+				</label>
+			</div>
+			<div class="cookie-modal-btns">
+				<button id="cookieCerrarModal" class="cookie-btn cookie-btn-rechazar">Cancelar</button>
+				<button id="cookieGuardar" class="cookie-btn cookie-btn-aceptar">Guardar preferencias</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="../js/fonts.js" defer></script>
+	<script src="../js/particles.js-master/particles.js" defer></script>
+	<script src="../js/particles.js-master/app.js" defer></script>
+	<script src="../js/filters.js" defer></script>
+	<script src="../js/main.js" defer></script>
+	<script src="../js/cookies.js" defer></script>
 </html>
