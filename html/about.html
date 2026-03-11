@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sobre Nosotros - FontsPage</title>
-    <meta name="description" content="Descubre la historia detrás de FontsPage, el conversor de letras creado con pasión y estilo.">
+    <meta name="description"
+        content="Descubre la historia detrás de FontsPage, el conversor de letras creado con pasión y estilo.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="AirLord">
+    <meta property="og:image" content="https://fontspage.com/images/opengraph.png">
+    <meta name="twitter:image" content="https://fontspage.com/images/opengraph.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
@@ -34,7 +40,7 @@
 
     <main>
         <section id="sobre-nosotros" class="contact-section" role="region" aria-labelledby="sobre-nosotros-titulo">
-            
+
             <h2 id="sobre-nosotros-titulo">Nuestra Historia</h2>
 
             <p>
@@ -45,8 +51,10 @@
             </p>
 
             <p>
-                Probamos generadores, páginas raras, apps llenas de anuncios… nada nos convencía. Así que decidimos crear
-                nuestra propia herramienta. Una que fuera rápida, bonita, sin publicidad molesta y con un catálogo enorme
+                Probamos generadores, páginas raras, apps llenas de anuncios… nada nos convencía. Así que decidimos
+                crear
+                nuestra propia herramienta. Una que fuera rápida, bonita, sin publicidad molesta y con un catálogo
+                enorme
                 de fuentes para poner nombres chulos en juegos como Fortnite, Free Fire, Roblox, Minecraft o cualquier
                 otro donde quieras destacar.
             </p>
@@ -100,84 +108,96 @@
 
 </body>
 
-	<footer class="site-footer">
-		<p>Made with ❤️ by AirLord</p>
-		<p>&copy; 2026 FontsPage</p>
-		<nav class="footer-links">
-			<a href="../index.html">Inicio</a> ·
-			<a href="../index.html#contenido">Fuentes</a> ·
-			<a href="./contact.html">Contacto</a> ·
-			<a href="./about.html">Sobre Nosotros</a> ·
-			<a href="./privacidad.html">Privacidad</a>
-		</nav>
-	</footer>
+<footer class="site-footer">
+    <p>Made with ❤️ by AirLord</p>
+    <p>&copy; 2026 FontsPage</p>
+    <nav class="footer-links">
+        <a href="../index.html">Inicio</a> ·
+        <a href="../index.html#contenido">Fuentes</a> ·
+        <a href="./contact.html">Contacto</a> ·
+        <a href="./about.html">Sobre Nosotros</a> ·
+        <a href="./privacidad.html">Privacidad</a>
+    </nav>
+</footer>
 
-	<button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">⬆</button>
+<button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">⬆</button>
 
-	<button id="cookieSettingsBtn" class="cookie-settings-btn" aria-label="Configurar cookies">🍪</button>
+<button id="cookieSettingsBtn" class="cookie-settings-btn" aria-label="Configurar cookies">🍪</button>
 
-	<!-- BANNER DE COOKIES -->
-	<div id="cookieBanner">
-		<div class="cookie-banner-inner">
-			<div class="cookie-banner-text">
-				<p>
-					Usamos cookies propias y de terceros (Google Analytics, Google AdSense) para mejorar
-					la experiencia y mostrar publicidad relevante que mantiene FontsPage gratuito.
-					Puedes aceptarlas, rechazarlas o configurarlas.
-					<a href="./privacidad.html" target="_blank">Más información</a>
-				</p>
-			</div>
-			<div class="cookie-banner-btns">
-				<button id="cookieConfig" class="cookie-btn cookie-btn-config">Configurar</button>
-				<button id="cookieRechazar" class="cookie-btn cookie-btn-rechazar">Rechazar</button>
-				<button id="cookieAceptar" class="cookie-btn cookie-btn-aceptar">Aceptar todo</button>
-			</div>
-		</div>
-	</div>
+<!-- BANNER DE COOKIES -->
+<div id="cookieBanner">
+    <div class="cookie-banner-inner">
+        <div class="cookie-banner-text">
+            <p>
+                Usamos cookies propias y de terceros (Google Analytics, Google AdSense) para mejorar
+                la experiencia y mostrar publicidad relevante que mantiene FontsPage gratuito.
+                Puedes aceptarlas, rechazarlas o configurarlas.
+                <a href="./privacidad.html" target="_blank">Más información</a>
+            </p>
+        </div>
+        <div class="cookie-banner-btns">
+            <button id="cookieConfig" class="cookie-btn cookie-btn-config">Configurar</button>
+            <button id="cookieRechazar" class="cookie-btn cookie-btn-rechazar">Rechazar</button>
+            <button id="cookieAceptar" class="cookie-btn cookie-btn-aceptar">Aceptar todo</button>
+        </div>
+    </div>
+</div>
 
-	<!-- MODAL DE CONFIGURACIÓN -->
-	<div id="cookieModal">
-		<div class="cookie-modal-content">
-			<h3>Configurar cookies</h3>
-			<p>Activa o desactiva cada tipo de cookie. Las cookies necesarias siempre están activas.</p>
-			<div class="cookie-opcion">
-				<div class="cookie-opcion-info">
-					<strong>Cookies necesarias</strong>
-					<span>Favoritos, último texto, preferencias de cookies.</span>
-				</div>
-				<label class="cookie-toggle">
-					<input type="checkbox" checked disabled>
-					<span class="cookie-toggle-slider"></span>
-				</label>
-			</div>
-			<div class="cookie-opcion">
-				<div class="cookie-opcion-info">
-					<strong>Google Analytics</strong>
-					<span>Estadísticas anónimas de uso de la web.</span>
-				</div>
-				<label class="cookie-toggle">
-					<input type="checkbox" id="toggleAnalytics" checked>
-					<span class="cookie-toggle-slider"></span>
-				</label>
-			</div>
-			<div class="cookie-opcion">
-				<div class="cookie-opcion-info">
-					<strong>Google AdSense</strong>
-					<span>Publicidad personalizada que financia el servicio.</span>
-				</div>
-				<label class="cookie-toggle">
-					<input type="checkbox" id="toggleAds" checked>
-					<span class="cookie-toggle-slider"></span>
-				</label>
-			</div>
-			<div class="cookie-modal-btns">
-				<button id="cookieCerrarModal" class="cookie-btn cookie-btn-rechazar">Cancelar</button>
-				<button id="cookieGuardar" class="cookie-btn cookie-btn-aceptar">Guardar preferencias</button>
-			</div>
-		</div>
-	</div>
+<!-- MODAL DE CONFIGURACIÓN -->
+<div id="cookieModal">
+    <div class="cookie-modal-content">
+        <h3>Configurar cookies</h3>
+        <p>Activa o desactiva cada tipo de cookie. Las cookies necesarias siempre están activas.</p>
+        <div class="cookie-opcion">
+            <div class="cookie-opcion-info">
+                <strong>Cookies necesarias</strong>
+                <span>Favoritos, último texto, preferencias de cookies.</span>
+            </div>
+            <label class="cookie-toggle">
+                <input type="checkbox" checked disabled>
+                <span class="cookie-toggle-slider"></span>
+            </label>
+        </div>
+        <div class="cookie-opcion">
+            <div class="cookie-opcion-info">
+                <strong>Google Analytics</strong>
+                <span>Estadísticas anónimas de uso de la web.</span>
+            </div>
+            <label class="cookie-toggle">
+                <input type="checkbox" id="toggleAnalytics" checked>
+                <span class="cookie-toggle-slider"></span>
+            </label>
+        </div>
+        <div class="cookie-opcion">
+            <div class="cookie-opcion-info">
+                <strong>Google AdSense</strong>
+                <span>Publicidad personalizada que financia el servicio.</span>
+            </div>
+            <label class="cookie-toggle">
+                <input type="checkbox" id="toggleAds" checked>
+                <span class="cookie-toggle-slider"></span>
+            </label>
+        </div>
+        <div class="cookie-modal-btns">
+            <button id="cookieCerrarModal" class="cookie-btn cookie-btn-rechazar">Cancelar</button>
+            <button id="cookieGuardar" class="cookie-btn cookie-btn-aceptar">Guardar preferencias</button>
+        </div>
+    </div>
+</div>
 
-	<script src="../js/particles.js-master/particles.js" defer></script>
-	<script src="../js/particles.js-master/app.js" defer></script>
-	<script src="../js/cookies.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/cookies.js" defer></script>
+<script>
+    window.addEventListener('load', function () {
+        var s1 = document.createElement('script');
+        s1.src = '../js/particles.js-master/particles.js';
+        s1.onload = function () {
+            var s2 = document.createElement('script');
+            s2.src = '../js/particles.js-master/app.js';
+            document.body.appendChild(s2);
+        };
+        document.body.appendChild(s1);
+    });
+</script>
+
 </html>

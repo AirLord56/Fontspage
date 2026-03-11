@@ -1,158 +1,192 @@
 /* ================================
-   BOTÓN SCROLL TO TOP
+   SCROLL TO TOP
 ================================ */
 
-const scrollBtn = document.getElementById("scrollTopBtn");
-const inputBox = document.getElementById("input");
+const scrollBtn = document.getElementById('scrollTopBtn');
+const inputBox  = document.getElementById('input');
 
-window.addEventListener("scroll", () => {
-    scrollBtn.classList.toggle("show", window.scrollY > 300);
-});
+if (scrollBtn) {
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('show', window.scrollY > 300);
+  });
 
-scrollBtn.addEventListener("click", () => {
-    inputBox.scrollIntoView({ behavior: "smooth" });
-});
-
+  scrollBtn.addEventListener('click', () => {
+    inputBox?.scrollIntoView({ behavior: 'smooth' });
+  });
+}
 
 /* ================================
    FORMULARIO DE CONTACTO
 ================================ */
 
-const contactForm = document.getElementById("contactForm");
+const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    contactForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-        const formData = new FormData(contactForm);
+    const formData = new FormData(contactForm);
 
-        const response = await fetch("./send.php", {
-            method: "POST",
-            body: formData
-        });
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
 
-        const result = await response.text();
+      const result = await response.json();
 
-        if (result.trim() === "success") {
-            const popup = document.getElementById("successPopup");
-            popup.classList.add("show");
-            contactForm.reset();
-        } else {
-            alert("Hubo un error al enviar el mensaje.");
-        }
+      if (result.success) {
+        const popup = document.getElementById('successPopup');
+        if (popup) popup.classList.add('show');
+        contactForm.reset();
+      } else {
+        alert('Hubo un error al enviar el mensaje. Inténtalo de nuevo.');
+      }
+    } catch (err) {
+      alert('No se pudo conectar con el servidor. Inténtalo más tarde.');
+    }
+  });
+
+  const closePopup = document.getElementById('closePopup');
+  const popup      = document.getElementById('successPopup');
+
+  if (closePopup && popup) {
+    closePopup.addEventListener('click', () => popup.classList.remove('show'));
+    popup.addEventListener('click', (e) => {
+      if (e.target.id === 'successPopup') popup.classList.remove('show');
     });
+  }
 }
 
-const closePopup = document.getElementById("closePopup");
-const popup = document.getElementById("successPopup");
+/* ================================
+   CONTADOR DE CARACTERES
+================================ */
 
-if (closePopup && popup) {
-    closePopup.addEventListener("click", () => popup.classList.remove("show"));
+const input    = document.getElementById('input');
+const charCount = document.getElementById('charCount');
 
-    popup.addEventListener("click", (e) => {
-        if (e.target.id === "successPopup") popup.classList.remove("show");
-    });
+function actualizarCharCount() {
+  if (!charCount || !input) return;
+  const n = input.value.length;
+  charCount.textContent = n === 1 ? '1 carácter' : `${n} caracteres`;
 }
-
 
 /* ================================
    RECORDAR ÚLTIMO TEXTO
 ================================ */
 
-const input = document.getElementById("input");
+if (input) {
+  input.addEventListener('input', () => {
+    localStorage.setItem('ultimoTexto', input.value);
+    actualizarCharCount();
+  });
 
-input.addEventListener("input", () => {
-    localStorage.setItem("ultimoTexto", input.value);
-    document.getElementById("charCount").textContent = input.value.length + " caracteres";
-});
-
-window.addEventListener("DOMContentLoaded", () => {
-    const guardado = localStorage.getItem("ultimoTexto");
+  window.addEventListener('DOMContentLoaded', () => {
+    const guardado = localStorage.getItem('ultimoTexto');
     if (guardado) {
-        input.value = guardado;
-        actualizarFuentes(guardado);
-        document.getElementById("charCount").textContent = guardado.length + " caracteres";
+      input.value = guardado;
+      if (typeof actualizarFuentes === 'function') actualizarFuentes(guardado);
     }
-});
-
+    actualizarCharCount();
+  });
+}
 
 /* ================================
-   FAVORITOS (LÓGICA COMPLETA)
+   COPIAR TODAS LAS FUENTES
+================================ */
+
+const copyAllBtn = document.getElementById('copyAll');
+
+if (copyAllBtn) {
+  copyAllBtn.addEventListener('click', () => {
+    const textos = [...document.querySelectorAll('.convertido')]
+      .filter(b => b.style.display !== 'none')
+      .map(b => {
+        const label   = b.querySelector('label')?.textContent || '';
+        const content = b.querySelector('textarea')?.value    || '';
+        return `${label}: ${content}`;
+      })
+      .filter(t => t.includes(': ') && t.split(': ')[1])
+      .join('\n');
+
+    if (!textos) return;
+
+    navigator.clipboard.writeText(textos).then(() => {
+      copyAllBtn.classList.add('copied-all');
+      const originalText = copyAllBtn.textContent;
+      copyAllBtn.textContent = '¡Copiado!';
+      setTimeout(() => {
+        copyAllBtn.textContent = originalText;
+        copyAllBtn.classList.remove('copied-all');
+      }, 1800);
+    });
+  });
+}
+
+/* ================================
+   FAVORITOS
 ================================ */
 
 function popupFavorito() {
-    const popup = document.createElement("div");
-    popup.className = "popup-fav";
-    popup.textContent = "Añadido a favoritos";
-    document.body.appendChild(popup);
-    setTimeout(() => popup.remove(), 1500);
+  const popup = document.createElement('div');
+  popup.className = 'popup-fav';
+  popup.textContent = 'Añadido a favoritos';
+  document.body.appendChild(popup);
+  setTimeout(() => popup.remove(), 1500);
 }
 
 function getFavoritos() {
-    return JSON.parse(localStorage.getItem("favoritos")) || [];
+  return JSON.parse(localStorage.getItem('favoritos')) || [];
 }
 
 function setFavoritos(lista) {
-    localStorage.setItem("favoritos", JSON.stringify(lista));
+  localStorage.setItem('favoritos', JSON.stringify(lista));
 }
 
 function toggleFavorito(nombre, texto) {
-    let favoritos = getFavoritos();
-    const existe = favoritos.some(f => f.nombre === nombre && f.texto === texto);
+  let favoritos = getFavoritos();
+  const existe  = favoritos.some(f => f.nombre === nombre && f.texto === texto);
 
-    if (existe) {
-        favoritos = favoritos.filter(f => !(f.nombre === nombre && f.texto === texto));
-    } else {
-        favoritos.push({ nombre, texto });
-        popupFavorito();
-    }
+  if (existe) {
+    favoritos = favoritos.filter(f => !(f.nombre === nombre && f.texto === texto));
+  } else {
+    favoritos.push({ nombre, texto });
+    popupFavorito();
+  }
 
-    setFavoritos(favoritos);
+  setFavoritos(favoritos);
 }
 
+document.addEventListener('click', (e) => {
+  if (!e.target.classList.contains('fav-btn')) return;
 
-/* ================================
-   CLICK EN ESTRELLA DE FAVORITOS
-================================ */
+  const btn    = e.target;
+  const bloque = btn.closest('.convertido');
+  const nombre = bloque.querySelector('label').textContent;
+  const texto  = bloque.querySelector('textarea').value;
 
-document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("fav-btn")) {
+  toggleFavorito(nombre, texto);
 
-        const btn = e.target;
-        const bloque = btn.closest(".convertido");
-        const nombre = bloque.querySelector("label").textContent;
-        const texto = bloque.querySelector("textarea").value;
+  const esFav = getFavoritos().some(f => f.nombre === nombre && f.texto === texto);
+  btn.classList.toggle('favorito', esFav);
+  btn.textContent = esFav ? '★' : '☆';
 
-        toggleFavorito(nombre, texto);
-
-        const esFav = getFavoritos().some(f => f.nombre === nombre && f.texto === texto);
-
-        btn.classList.toggle("favorito", esFav);
-        btn.textContent = esFav ? "★" : "☆";
-
-        if (modoFavoritos) mostrarSoloFavoritos();
-    }
+  // Si está en modo favoritos, actualizar vista
+  if (typeof modoFavoritos !== 'undefined' && modoFavoritos) {
+    if (typeof mostrarSoloFavoritos === 'function') mostrarSoloFavoritos();
+  }
 });
 
-
-/* ================================
-   ACTUALIZAR ESTRELLAS AL CARGAR
-================================ */
-
 function actualizarEstrellas() {
-    const favoritos = getFavoritos();
-
-    document.querySelectorAll(".convertido").forEach(b => {
-        const nombre = b.querySelector("label").textContent;
-        const texto = b.querySelector("textarea").value;
-        const btn = b.querySelector(".fav-btn");
-
-        const esFav = favoritos.some(f => f.nombre === nombre && f.texto === texto);
-
-        btn.classList.toggle("favorito", esFav);
-        btn.textContent = esFav ? "★" : "☆";
-    });
+  const favoritos = getFavoritos();
+  document.querySelectorAll('.convertido').forEach(b => {
+    const nombre = b.querySelector('label').textContent;
+    const texto  = b.querySelector('textarea').value;
+    const btn    = b.querySelector('.fav-btn');
+    const esFav  = favoritos.some(f => f.nombre === nombre && f.texto === texto);
+    btn.classList.toggle('favorito', esFav);
+    btn.textContent = esFav ? '★' : '☆';
+  });
 }
 
-window.addEventListener("DOMContentLoaded", actualizarEstrellas);
-
+window.addEventListener('DOMContentLoaded', actualizarEstrellas);

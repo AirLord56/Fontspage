@@ -402,6 +402,8 @@ nav ul li a:hover {
   font-size: 1.05rem;
   position: relative;
   z-index: 10;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
 }
 
 /* Fondo oscuro (contacto, sobre-nosotros, privacidad) */
@@ -1174,5 +1176,44 @@ nav ul li a:hover {
     width: 26px;
     height: 26px;
     font-size: 14px;
+  }
+}
+/* ================================
+   BANNER COOKIES — MÓVIL
+================================ */
+
+@media (max-width: 600px) {
+  #cookieBanner {
+    width: 100%;
+    left: 0;
+    right: 0;
+    transform: none;
+    border-radius: 16px 16px 0 0;
+    padding: 1.2rem 1rem 1.4rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    bottom: -70vh;
+  }
+
+  #cookieBanner.show {
+    bottom: 0;
+  }
+
+  .cookie-banner-text p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .cookie-banner-btns {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin-top: 0.2rem;
+  }
+
+  .cookie-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.65rem 1rem;
   }
 }

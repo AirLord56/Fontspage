@@ -5,9 +5,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap">
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
 	<link rel="canonical" href="https://fontspage.com">
+	<link rel="preload" href="./images/logo.png" as="image">
 	<title>Fonts Page - Conversor de Letras</title>
 	<meta name="description"
 		content="Convierte tus textos en estilos únicos con nuestro conversor de letras y fuentes. Ideal para redes sociales, juegos, nicks y diseños.">
@@ -16,12 +20,11 @@
 	<meta property="og:title" content="FontsPage — Generador de fuentes y estilos de texto online">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://fontspage.com">
-	<meta property="og:image" content="./images/opengraph.png">
+	<meta property="og:image" content="https://fontspage.com/images/opengraph.png">
 	<meta property="og:site_name" content="FontsPage">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="FontsPage — Generador de fuentes y estilos de texto online">
-	<meta name="twitter:image" content="./images/opengraph.png">
-
+	<meta name="twitter:image" content="https://fontspage.com/images/opengraph.png">
 	<script type="application/ld+json">
 		{
 		"@context": "https://schema.org",
@@ -171,7 +174,7 @@
 	<header>
 		<div class="logo-header">
 			<a href="./index.html" aria-label="Ir a la página principal">
-				<img src="./images/logo.png" alt="Logo FontsPage">
+				<img src="./images/logo.png" alt="Logo FontsPage" loading="lazy">
 			</a>
 		</div>
 
@@ -210,7 +213,7 @@
 			</div>
 
 			<button id="copyAll" class="copy-all-btn">Copiar todas las fuentes</button>
-
+			<p id="fontCounter" style="text-align:center; color:#888; font-size:0.85rem;"></p>
 			<!-- CUSTOM FONTS -->
 			<div class="convertido" data-type="bold">
 				<label>Bold</label>
@@ -436,7 +439,7 @@
 				<a href="./html/instagram.html" target="_blank" rel="noopener noreferrer">Instagram</a>,
 				<a href="./html/tiktok.html" target="_blank" rel="noopener noreferrer">TikTok</a>,
 				<a href="./html/whatsapp.html" target="_blank" rel="noopener noreferrer">WhatsApp</a>,
-				<a href="./html/twtich.html" target="_blank" rel="noopener noreferrer">Twitch</a>,
+				<a href="./html/twitch.html" target="_blank" rel="noopener noreferrer">Twitch</a>,
 				<a href="./html/x.html" target="_blank" rel="noopener noreferrer">X (Twitter)</a>,
 				<a href="./html/facebook.html" target="_blank" rel="noopener noreferrer">Facebook</a>,
 				<a href="./html/discord.html" target="_blank" rel="noopener noreferrer">Discord</a>,
@@ -622,16 +625,22 @@
 		</div>
 	</div>
 
-	<script src="./js/cookies.js" defer></script>
-
-	<script src="js/dupe.js" type="text/javascript" defer></script>
-	<script src="js/fonts.js" type="text/javascript" defer></script>
-	<script src="js/particles.js-master/particles.js" type="text/javascript" defer></script>
-	<script src="js/particles.js-master/app.js" type="text/javascript" defer></script>
-	<script src="js/filters.js" type="text/javascript" defer></script>
-	<script src="js/main.js" type="text/javascript" defer></script>
-	<script src="js/cookies.js" type="text/javascript" defer></script>
-
+	<script src="js/fonts.js" defer></script>
+	<script src="js/filters.js" defer></script>
+	<script src="js/main.js" defer></script>
+	<script src="js/cookies.js" defer></script>
+	<script>
+		window.addEventListener('load', function () {
+			var s1 = document.createElement('script');
+			s1.src = 'js/particles.js-master/particles.js';
+			s1.onload = function () {
+				var s2 = document.createElement('script');
+				s2.src = 'js/particles.js-master/app.js';
+				document.body.appendChild(s2);
+			};
+			document.body.appendChild(s1);
+		});
+	</script>
 </body>
 
 </html>
