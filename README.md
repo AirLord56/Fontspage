@@ -2,7 +2,7 @@
 
 > Conversor de letras y fuentes Unicode para redes sociales, juegos y cualquier plataforma.
 
-**[fontspage.com](https://fonstpage.vercel.app)** — Transforma palabras en diseños únicos.
+**[fontspage.com](https://fontspage.vercel.app)** — Transforma palabras en diseños únicos.
 
 ---
 
